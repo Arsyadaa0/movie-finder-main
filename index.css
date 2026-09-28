@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Inter:wght@400;500&display=swap");
+
+:root {
+  --bg: #0f0d0f;
+  --surface: #1c1a1d;
+  --text: #e8b84b;
+  --text-muted: #9a938c;
+  --gold: #f70909;
+  --red: #b3413c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #2a272b;
+}
+
+.navbar__mark {
+  font-size: 1.6rem;
+}
+
+.navbar__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.navbar__title-accent {
+  color: var(--gold);
+}
+
+/* Main */
+.app__main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.search-bar__input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #343034;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.search-bar__input:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.search-bar__button {
+  padding: 0.7rem 1.3rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--red);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-bar__button:hover {
+  background: #9c352f;
+}
+
+.status-text {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Movie grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.4rem;
+}
+
+.movie-card {
+  background: var(--surface);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-card__poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card__body {
+  padding: 0.7rem 0.8rem 0.9rem;
+}
+
+.movie-card__title {
+  font-size: 0.92rem;
+  margin: 0 0 0.25rem;
+  line-height: 1.3;
+}
+
+.movie-card__year {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
